@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700;9..144,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap');
+
+* {
+  box-sizing: border-box;
+  }
+
+html {
+scroll-behavior: smooth;
+}
+
+body {
+font-family: 'Outfit', sans-serif;
+background-color: #FBF8F1;
+color: #1C2B1E;
+margin: 0;
+}
+
+h1, h2, h3, h4 {
+font-family: 'Fraunces', Georgia, serif;
+}
+
+button, input, textarea, select {
+font-family: 'Outfit', sans-serif;
+}
+
+button {
+cursor: pointer;
+}
+
+.section-label {
+font-size: 0.7rem;
+font-weight: 600;
+letter-spacing: 0.18em;
+text-transform: uppercase;
+color: #C97D1A;
+}
+
+.course-card {
+transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.course-card:hover {
+transform: translateY(-3px);
+box-shadow: 0 12px 40px rgba(30, 77, 58, 0.12);
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+outline: none;
+border-color: #1E4D3A;
+box-shadow: 0 0 0 3px rgba(30, 77, 58, 0.12);
+}
+
+.mobile-preview-button {
+position: fixed;
+right: 1.5rem;
+bottom: 1.5rem;
+z-index: 300;
+padding: 0.75rem 1.25rem;
+border: 1px solid rgba(251, 248, 241, 0.18);
+border-radius: 999px;
+background: #1E4D3A;
+box-shadow: 0 8px 24px rgba(20, 46, 35, 0.24);
+color: #FBF8F1;
+font-size: 0.85rem;
+font-weight: 700;
+transition: background 0.15s ease, transform 0.15s ease;
+}
+
+.mobile-preview-button:hover {
+background: #142e23;
+transform: translateY(-2px);
+}
+
+.mobile-preview-button:focus-visible {
+outline: 3px solid rgba(245, 169, 64, 0.5);
+outline-offset: 3px;
+}
+
+@media (max-width: 900px) {
+html,
+body,
+#root {
+width: 100%;
+min-height: 100%;
+}
+
+.mobile-app-root {
+    width: 100%;
+    min-height: 100dvh;
+    padding: 0;
+    background: #FBF8F1;
+}
+
+.mobile-screen-map,
+.mobile-website-switch,
+.mobile-device-control,
+.mobile-status-bar,
+.mobile-home-indicator {
+    display: none !important;
+}
+
+.mobile-device-shell,
+.mobile-device-chassis,
+.mobile-device-bezel {
+    width: 100%;
+    height: 100%;
+    min-height: 0;
+}
+
+.mobile-device-chassis,
+.mobile-device-bezel {
+    padding: 0;
+    border-radius: 0;
+    background: #FBF8F1;
+    box-shadow: none;
+}
+
+.mobile-app-surface {
+    min-height: 0;
+}
+
+}
